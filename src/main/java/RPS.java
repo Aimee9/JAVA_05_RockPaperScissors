@@ -22,23 +22,21 @@ public class RPS {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    List<String> choices = new ArrayList<String>();
-    list.add("rock");
-    list.add("paper");
-    list.add("scissors");
 
-    Random result = new Random();
+
+      HashMap<Integer, String> choices = new HashMap<Integer, String>();
+      choices.put(0, "rock");
+      choices.put(1, "paper");
+      choices.put(2, "scissors");
+      //getRandomResult(choices);
   }
 
+  public Integer getRandomResult(HashMap<Integer, String> choices) {
+      Random randomGenerator = new Random();
+      Integer playerTwo = randomGenerator.nextInt(3);
+      //return getRandomResult;
+  }
 
-
-
-
-
-  public String getRandomResult(List<String> choices) {
-      int index = result.nextInt(choices.size());
-      String playerTwo = choices.get(index);
-      }
 
   public static String checkWinnerRockFirst(String playerOne, String playerTwo) {
 
@@ -62,7 +60,9 @@ public class RPS {
     scissors.put("paper", "Player One!");
     if (playerOne == "rock") {
 
-    } return rock.get(playerTwo);
+    }
+
+    return rock.get(playerTwo);
 
 
   }
